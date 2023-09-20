@@ -13,12 +13,12 @@ const GalleryNavbar = ({ setSearchTerm, onSearch }) => {
   };
 
   return (
-    <div className="navbar animate__animated animate__fadeInDown mt-4 py-4 mx-2 rounded-lg">
+    <div className="navbar animate__animated animate__fadeInDown  py-4 mx-2 rounded-lg">
       <h2 className="text-2xl font-bold">
         Drag<span className="text-blue-700 bg-white p-2 rounded-r-full border-4 border-blue-700">Drop</span>
       </h2>
       <nav className="nav">
-        <form className="search-form" onSubmit={handleSubmit}>
+        <form className="search-form " onSubmit={handleSubmit}>
           <input
             type="search"
             placeholder="Search images"

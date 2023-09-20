@@ -92,8 +92,8 @@ const Gallery = ({
               </Droppable>
             </DragDropContext>
           ) : (
-            <div className="image-not-found">
-              Could not find any image for "{searchTerm}".
+            <div className="image-not-found text-xl text-center mt-14 font-bold">
+              Could not find any image for "{searchTerm}" 😒😒😒.
             </div>
           )}
         </>
