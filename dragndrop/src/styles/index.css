@@ -7,6 +7,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=Lato:wght@300;400&family=Poppins&display=swap');
 
+body {
+  
+}
+
 :root {
   --text-color: #0D6EFD;
 }
@@ -21,9 +25,7 @@ body {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  
   position: fixed;
   width: 100%;
   background-color: rgb(39, 216, 235);
@@ -33,35 +35,14 @@ body {
   color: white;
 }
 
-nav {
-  width: 50%;
-}
 
-.nav {
-  display: flex;
-  width: 50%;
-  justify-content: space-between;
-}
-
-.nav ul {
-  width: 40%;
-}
-
-nav ul {
-  display: flex;
-  justify-content: space-between;
-}
 
 nav ul li {
   list-style: none;
   cursor: pointer;
 }
 
-.form-span {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-}
+
 
 .text-decoration {
   text-decoration: none;
@@ -98,15 +79,10 @@ nav ul li {
   color: var(--text-color) !important;
 }
 
-.login-container {
-  width: 100%;
-  padding: -5px;
-  height: 100%;
-  background-color: rgb(39, 216, 235);
-}
+
 
 .form {
-  width: 90%;
+  width: 60%;
   margin: auto;
   height: 100%;
   color: white;
@@ -129,8 +105,9 @@ label {
 }
 
 input {
-  width: 99%;
-  padding: 10px;
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.4rem;
   outline: none;
   border: none;
   color: black;
@@ -138,10 +115,7 @@ input {
 
 
 
-.button-container {
-  width: 103%;
-  margin-top: 10px;
-}
+
 
 /* gallery.css */
 .image-grid-container {
@@ -162,21 +136,20 @@ input {
 }
 
 .gallery-image {
-  width: 99%;
-  height: 400px;
+  width: 100%;
+  height: auto;
   display: block;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
-  width: 50%;
+  width: 25%;
   align-items: center;
 }
 
 .search-input {
   padding: 5px;
-  border: 1px solid var(--text-color);
-  border-radius: 4px;
   padding: 10px;
   font-size: 15px;
   margin-right: 10px;
@@ -260,11 +233,11 @@ input {
 .tags {
   width: 70%;
   z-index: 5;
-  justify-content: space-between;
+  
 }
 
 .tag {
-  border: 1px solid black;
+  border: 1px solid rgb(186, 168, 168);
   border-radius: 18px;
   padding: 8px;
   width: 80px;
@@ -346,4 +319,25 @@ input {
   .illustration {
     display: none;
   }
+}
+
+@media screen and (max-width: 767px){
+  .search-form {
+    width: 100%;
+  }
+
+    .tags {
+      width: 100%;
+      justify-content: center;
+      gap: 0.5rem;
+  
+    }
+
+        .tag {
+          border: 1px solid rgb(186, 168, 168);
+          border-radius: 7px;
+          padding: 6px;
+          width: 90px;
+          
+        }
 }

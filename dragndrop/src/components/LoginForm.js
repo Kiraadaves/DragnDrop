@@ -35,10 +35,10 @@ function Form() {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container w-full p-[-5px] bg-[#27d8eb] md:h-full">
       <ToastContainer /> {/* Add the ToastContainer component */}
-      <div className="w-2/5 mt-10 mx-auto py-8 rounded-lg border-2 border-slate-300 drop-shadow-2xl">
-        <form className="form pl-4" onSubmit={handleSubmit}>
+      <div className="md:w-2/5 md:mt-10 md:mx-auto md:py-8 rounded-lg md:border-2 border-slate-300 drop-shadow-2xl">
+        <form className=" text-white px-8" onSubmit={handleSubmit}>
           <h1 className="text-5xl text-center font-black">
             Drag<span className="logo-span bg-white rounded-md">Drop</span>
           </h1>
@@ -49,7 +49,7 @@ function Form() {
           <label className="text-lg font-bold">
             Email
             <input
-              placeholder="Please enter an email"
+              placeholder="use 'user@example.com' as login email"
               type="email"
               value={email}
               name="email"
@@ -62,7 +62,7 @@ function Form() {
           <label className="text-lg font-bold">
             Password
             <input
-              placeholder="Enter a password"
+              placeholder="Enter '1Password' to log in successfully"
               type="password"
               value={password}
               name="password"
@@ -70,25 +70,21 @@ function Form() {
               required
             />
           </label>
-          <br />
-          <br />
-          <br />
-          <div className="button-container">
+          
+          <div className="mt-12 flex items-center justify-center">
             {buttonLoader ? (
               <div className="spinner"></div>
             ) : (
               <button
                 type="submit"
-                className="button rounded-lg hover:bg-white hover:font-bold hover:text-blue-600 w-1/2 mx-36 font-bold text-lg py-3 bg-blue-500"
+                className="button rounded-lg hover:bg-white hover:font-bold hover:text-blue-600 w-full md:w-auto px-16 font-bold text-lg py-3 bg-blue-500"
               >
                 Log In
               </button>
             )}
           </div>
-          <br />
-          <br />
-          <br />
-          <span className="form-span font-bold flex items-center">
+          
+          <span className="justify-center mt-12 font-bold flex items-center">
             Don't have an account? &nbsp;
             <Link to="/signup" className="font-bold text-lg text-blue-700">
               Sign Up

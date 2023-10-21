@@ -13,7 +13,7 @@ const TagsComponent = ({ setSelectedTag, fetchImagesByTag }) => {
   };
 
   return (
-    <div className="tags animate__animated animate__fadeInLeft flex mt-14 mx-auto">
+    <div className="tags animate__animated animate__fadeInLeft flex md:mt-14 md:gap-8">
       <div
         className={`tag ${activeTag === "All" ? "active" : "blank"}`}
         onClick={() => handleTagClick("All")}

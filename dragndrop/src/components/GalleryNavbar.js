@@ -13,24 +13,28 @@ const GalleryNavbar = ({ setSearchTerm, onSearch }) => {
   };
 
   return (
-    <div className="navbar animate__animated animate__fadeInDown  py-4 mx-2 rounded-lg">
-      <h2 className="text-2xl font-bold">
-        Drag<span className="text-blue-700 bg-white p-2 rounded-r-full border-4 border-blue-700">Drop</span>
+    <div className="md:px-10 navbar flex flex-col md:flex-row items-center justify-between animate__animated animate__fadeInDown  py-4">
+      <h2 className="text-2xl font-bold mb-10 md:mb-0 mt-5 md:mt-0">
+        Drag
+        <span className="text-blue-700 bg-white p-2 rounded-r-full border-4 border-blue-700">
+          Drop
+        </span>
       </h2>
-      <nav className="nav">
-        <form className="search-form " onSubmit={handleSubmit}>
-          <input
-            type="search"
-            placeholder="Search images"
-            className="search-input"
-            onChange={handleInputChange}
-          />
-          {/* <button type="submit" className="search-button">
+
+      <form
+        className="search-form bg-white rounded-lg "
+        onSubmit={handleSubmit}
+      >
+        <input
+          type="search"
+          placeholder="Search images"
+          className="search-input"
+          onChange={handleInputChange}
+        />
+        {/* <button type="submit" className="search-button">
             <FaSearch />
           </button> */}
-        </form>
-        
-      </nav>
+      </form>
     </div>
   );
 };
